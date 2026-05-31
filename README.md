@@ -1,5 +1,8 @@
 # bounce
 
+[![tests](https://github.com/teletraan-one/bounce/actions/workflows/test.yml/badge.svg)](https://github.com/teletraan-one/bounce/actions/workflows/test.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 **Cross-model peer review for Claude Code, with file access, source citations, secret scanning, and a real audit log.**
 
 Claude does a piece of work. Bounce sends it to a second AI (default: OpenAI's `gpt-5.5`). The peer reviewer reads project files itself, pushes back hard on weak reasoning, and is forced to cite sources for every factual claim — and so is Claude. Both sides catch each other's mistakes. Every file read, every cost, every iteration is logged.
