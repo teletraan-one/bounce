@@ -1,0 +1,8 @@
+{
+  "presets": ["example-project"],
+  "extra_denylist_patterns": [
+    ".*customer-data.*\\.csv$",
+    ".*internal-only.*"
+  ],
+  "_note": "Drop this file at .claude/bounce-config.json in your project. List preset names to enable project-specific denylist patterns; presets are JSON files at .claude/scripts/bounce-presets/<name>.json. Use extra_denylist_patterns for one-off additions without creating a full preset."
+}

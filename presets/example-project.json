@@ -1,0 +1,16 @@
+{
+  "name": "example-project",
+  "description": "Example project-specific denylist preset. Demonstrates the shape of a real-world preset: workflow-specific PII-bearing files, anonymization artifacts, and per-file precision for confirmed-sensitive paths. Patterns are case-insensitive. Replace with your own.",
+  "denylist_patterns": [
+    ".*watchlist.*",
+    ".*mapping(\\.enc)?\\.json$",
+    "/Mapping[_.\\-].*",
+    "anonymization_fields.*",
+    "anonymization_report.*\\.json$",
+    "manual_review_queue.*\\.csv$",
+    ".*anonymized.*\\.csv$",
+    "/Example Submissions/example_quarterly_report\\.docx$",
+    "/Example Submissions/example_internal_summary\\.docx$"
+  ],
+  "notes": "The last two entries demonstrate the **per-file precision principle**: when only specific files in a directory are confirmed-sensitive, list them individually rather than blocking the whole directory (other files in the same directory may be benign — e.g. a generic prompt template — and blocking the directory would prevent the peer reviewer from reading them). Anchor patterns to a unique path fragment (`/Example Submissions/...`) to avoid accidental matches elsewhere in the workspace."
+}
